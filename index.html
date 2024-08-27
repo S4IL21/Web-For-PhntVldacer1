@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhntVldacer1's Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6Lo6uKb0HyXANUdKxZpjbcw5jY6asjdqN4Z2S4R0dM5p1MQ2pEAGJ/2GJbUjhFx" crossorigin="anonymous">
+    
+    <style>
+        :root {
+            --primary-color: #1e90ff;
+            --secondary-color: #ffffff;
+            --background-color: #d0f0fd; /* Light Blue Background Color */
+            --text-color: #333333;
+            --accent-color: #ff7e5f;
+            --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            --header-bg-color: #ffffff;
+            --header-text-color: #333333;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        header {
+            width: 100%;
+            height: 60vh;
+            background: url('https://i.ibb.co/5jncKkY/184d4f5187be.png') no-repeat center center/cover;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom-left-radius: 50% 25%;
+            border-bottom-right-radius: 50% 25%;
+            background-color: var(--header-bg-color);
+            color: var(--header-text-color);
+            padding: 40px 0;
+            box-shadow: var(--box-shadow);
+        }
+        
+        #profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid var(--secondary-color);
+            position: absolute;
+            bottom: -90px;
+            background: url('https://i.ibb.co/mctjTrg/30d73d25e705.png') no-repeat center center/cover;
+            box-shadow: var(--box-shadow);
+        }
+        
+        main {
+            padding: 120px 20px 60px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            color: #333333;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 20px 10px;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .button:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+        
+        .video-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            margin: 60px 0;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .video-section iframe {
+            width: 60%;
+            height: 450px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .video-description {
+            width: 35%;
+            padding-left: 20px;
+            text-align: left;
+        }
+        
+        .video-description h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .video-description p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555555;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .social-links a {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            transform: scale(1.1);
+        }
+
+        .social-links img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links img:hover {
+            transform: scale(1.1);
+        }
+        
+        footer {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        
+        footer p {
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: var(--accent-color);
+        }
+        
+        @media (max-width: 768px) {
+            .video-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .video-section iframe {
+                width: 90%;
+                height: 250px;
+            }
+            
+            .video-description {
+                width: 90%;
+                padding-left: 0;
+                text-align: center;
+            }
+            
+            .video-description h2 {
+                font-size: 1.5rem;
+            }
+            
+            .video-description p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+            
+            .button {
+                padding: 12px 25px;
+                font-size: 0.9rem;
+            }
+            
+            .social-links a, .social-links img {
+                font-size: 1.5rem;
+                width: 30px;
+                height: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header data-aos="fade-in" data-aos-duration="1500">
+        <div id="profile-pic" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000"></div>
+    </header>
+    
+    <main>
+        <h1 data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">Welcome to PhntVldacer1's Website</h1>
+        
+        <p data-aos="fade-up" data-aos-delay="1200" data-aos-duration="1000">
+            Hey there! I'm <strong>PhntVldacer1</strong>, a passionate gamer and 3D modeling enthusiast. I love immersing myself in 
+            <em>Build A Boat For Treasure (BABFT)</em> adventures and bringing ideas to life through intricate 3D designs.
+        </p>
+        
+        <div id="video-section" class="video-section" data-aos="fade-up" data-aos-delay="1400" data-aos-duration="1000">
+            <iframe src="https://www.youtube.com/embed/Cl4j5VNBdiE" title="Featured Video"></iframe>
+            <div class="video-description">
+                <h2>My cool drone (auto take off, RTH, and more) in build a boat ROBLOX</h2>
+                <p>
+                    🚁This drone is very cool and advanced!🚁
+                    🔥It was very fun making it, it took a lot of tests but I did it!🔥
+                    🍹If you think my drone is very cool, consider to like and subscribe for more videos like this one!🍹
+                </p>
+            </div>
+        </div>
+        
+        <div id="nex3ds-section" class="nex3ds-section" data-aos="fade-up" data-aos-delay="1600" data-aos-duration="1000">
+            <h2>Explore My 3D Editor</h2>
+            <a href="/Nex3Ds/" class="button">Go to Nex3Ds</a>
+                    </div>
+
+                    <div id="social-section" class="social-section" data-aos="fade-up" data-aos-delay="1800" data-aos-duration="1000">
+                        <h2>Connect with Me</h2>
+                        <div class="social-links">
+                            <a href="https://www.youtube.com/@PhntVldacer1" target="_blank" title="YouTube">
+                                <img src="https://i.ibb.co/vZyY5Tn/youtube-logo-youtube-icon-transparent-free-png.webp" alt="YouTube Logo">
+                            </a>
+                            <a href="https://discord.gg/XSfuyfqQtG" target="_blank" title="Discord">
+                                <img src="https://i.ibb.co/7RPFBkW/discord-round-color-icon.png" alt="Discord Logo">
+                            </a>
+                            <a href="https://blockcoin.social/profile/phntvldacer1" target="_blank" title="BlockCoin">
+                                <img src="https://blockcoin.social/logo.png" alt="BlockCoin Logo">
+                            </a>
+                        </div>
+                    </div>
+                </main>
+
+                <footer>
+                    <p>Made by <a href="https://s4il.is-a.dev/" target="_blank">S4IL</a></p>
+                </footer>
+
+                <!-- AOS Animation Script -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+                <script>
+                    AOS.init();
+                </script>
+            </body>
+            </html>
